@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity: Data Types</title>
+
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 80px;
+            border-radius: 50%;
+
+            margin-bottom: 20px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 50vh;
+        }
+
+        .details-container {
+            border: 1px solid rgb(53, 178, 255);
+            border-radius: 12px;
+            padding: 30px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h3 {
+            margin-bottom: 20px;
+        }
+
+        .details-container p {
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        .details-container span {
+            font-size: 13px;
+        }
+
+        a {
+            font-size: 13px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="details-container">
+        <div>
+            <h3>Profile Details:</h3>
+            <img src="07110972.jpg">
+            <p><b>Name:</b> <span class="name"></span></p>
+            <p><b>Grade:</b> <span class="grade"></span></p>
+            <p><b>Enrolled Date:</b> <span class="enrolled-date"></span></p>
+            <p><b>Hobbies: </b> <span class="hobbies"></span></p>
+        </div>
+
+        <a href="subjects.html">Subjects</a>
+    </div>
+
+    <script>
+
+        const firstName = "James Mickel";
+        const lastName = "Ricarte";
+
+        document.querySelector('.name').innerHTML = firstName + " " + lastName;
+
+        const grade = 1.0;
+
+        document.querySelector('.grade').innerHTML = grade;
+
+        const enrolledDate = new Date("2024-01-15");
+
+        document.querySelector('.enrolled-date').innerHTML = enrolledDate.toLocaleDateString();
+
+        const hobby1 = "editing";
+        const hobby2 = "taking photos";
+
+        document.querySelector('.hobbies').innerHTML = hobby1 + ", " + hobby2;
+
+    </script>
+</body>
+</html>
